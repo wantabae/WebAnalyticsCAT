@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clothing | E-COMMERCE WEBSITE BY EDYODA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- Clothing Section -->
+    <section id="clothing-section">
+        <h2>Clothing Collection</h2>
+        <div class="product-list">
+            <!-- Add your clothing products here -->
+            <div class="product-item">
+                <img src="clothing1.jpg" alt="Clothing 1">
+                <h3>Product Name</h3>
+                <p>$29.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="clothing2.jpg" alt="Clothing 2">
+                <h3>Product Name</h3>
+                <p>$39.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+</body>
+</html>

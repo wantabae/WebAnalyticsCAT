@@ -1,0 +1,216 @@
+/* Body and General Styling */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section Styling */
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+/* Form Styling */
+#contact-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #555;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Video Section Styling */
+#promo-video {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Downloadable Document Section Styling */
+#download-document {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-form {
+        width: 90%;
+    }
+
+    video {
+        width: 100%;
+    }
+}
+/* Styling for the download button */
+.download-btn {
+    display: inline-block;
+    background-color: #ff7f50; /* Attractive coral color */
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.download-btn:active {
+    background-color: #ff6347; /* Different shade when clicked */
+    transform: scale(1); /* Reset scale on click */
+}
+
+/* Aligning the download section */
+#download-document {
+    text-align: center;
+    margin: 40px 0;
+}
+/* Ensure the form section takes full height and centers the content */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height for the entire page */
+}
+
+
+/* Add padding-top to avoid overlap by header */
+#contact-form, #youtube-page { /* Add IDs for your sections */
+    padding-top: 80px; /* Ensure the padding accounts for header height + some space */
+}
+
+/* Centering for Contact Us form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(120vh - 80px); /* Full viewport height minus header space */
+    background-color: #f0f0f0;
+}
+
+/* General styling for the form */
+#contactForm {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+#contactForm label, #youtube-page h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#contactForm button {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+#contactForm button:hover {
+    background-color: #218838;
+}
+
+#form-status {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* YouTube page styling (assuming you have a #youtube-page section) */
+#youtube-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Ensure it doesn't get covered by the header */
+}
+
+#youtube-page h2 {
+    margin-bottom: 20px;
+}
+
+#youtube-page video {
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

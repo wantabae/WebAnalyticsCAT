@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us | E-COMMERCE WEBSITE BY EDYODA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div id="1"></div>
+    <script>
+        load("header.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(1).innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+        <p id="form-status"></p> <!-- Placeholder for form submission status -->
+    </section>
+
+    <!-- FOOTER -->
+    <div id="4"></div>
+    <script>
+        load("footer.html");
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
+
+    <!-- Form Submission via JavaScript -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const address = document.getElementById('address').value;
+            const message = document.getElementById('message').value;
+
+            if (name && email && phone && subject && address && message) {
+                document.getElementById('form-status').innerHTML = "Form submitted successfully! Thank you, " + name + ".";
+                document.getElementById('form-status').style.color = 'green';
+            } else {
+                document.getElementById('form-status').innerHTML = "Please fill out all fields.";
+                document.getElementById('form-status').style.color = 'red';
+            }
+
+            // Optionally, you can clear the form here
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
