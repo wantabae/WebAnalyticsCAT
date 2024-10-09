@@ -84,5 +84,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    
     <script src="content.js"></script>
 
+   <h1>Custom Events Demo</h1>
+
+    <!-- Select Item from a List -->
+    <button onclick="selectItem('item123')">Select Item</button>
+
+    <!-- View Item Details -->
+    <button onclick="viewItemDetails('item123')">View Details</button>
+
+    <!-- Add/Remove from Shopping Cart -->
+    <button onclick="addToCart('item123')">Add to Cart</button>
+    <button onclick="removeFromCart('item123')">Remove from Cart</button>
+
+    <!-- Initiate Checkout Process -->
+    <button onclick="initiateCheckout()">Checkout</button>
+
+    <script>
+        // Add your custom event functions here
+
+        function selectItem(itemId) {
+            gtag('event', 'select_item', {
+                'item_id': itemId
+            });
+        }
+
+        function viewItemDetails(itemId) {
+            gtag('event', 'view_item_details', {
+                'item_id': itemId
+            });
+        }
+
+        function addToCart(itemId) {
+            gtag('event', 'add_to_cart', {
+                'item_id': itemId
+            });
+        }
+
+        function removeFromCart(itemId) {
+            gtag('event', 'remove_from_cart', {
+                'item_id': itemId
+            });
+        }
+
+        function initiateCheckout() {
+            gtag('event', 'begin_checkout', {
+                'currency': 'USD',
+                'value': 100.00, // Example total value
+                'items': [{ 
+                    'item_id': 'item123', 
+                    'item_name': 'Sample Item',
+                    'price': 100.00,
+                    'quantity': 1 
+                }]
+            });
+        }
+    </script>
+
+
 </body>
 </html>
